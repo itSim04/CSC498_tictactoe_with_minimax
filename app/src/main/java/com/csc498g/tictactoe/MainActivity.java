@@ -30,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
         views.put(6, findViewById(R.id.piece6));
         views.put(7, findViewById(R.id.piece7));
         views.put(8, findViewById(R.id.piece8));
-        
+
     }
+
+    public void animateEntrance(ImageView spot) {
+
+        spot.setImageResource(player ? R.drawable.red : R.drawable.yellow);
+        spot.animate().rotation(3600).setDuration(500);
+
+    }
+
 }
