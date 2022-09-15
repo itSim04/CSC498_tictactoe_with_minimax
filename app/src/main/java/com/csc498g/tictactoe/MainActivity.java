@@ -20,5 +20,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        views.put(0, findViewById(R.id.piece0));
+        views.put(1, findViewById(R.id.piece1));
+        views.put(2, findViewById(R.id.piece2));
+        views.put(3, findViewById(R.id.piece3));
+        views.put(4, findViewById(R.id.piece4));
+        views.put(5, findViewById(R.id.piece5));
+        views.put(6, findViewById(R.id.piece6));
+        views.put(7, findViewById(R.id.piece7));
+        views.put(8, findViewById(R.id.piece8));
+        
     }
 }
