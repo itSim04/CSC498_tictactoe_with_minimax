@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
         views.put(6, findViewById(R.id.piece6));
         views.put(7, findViewById(R.id.piece7));
         views.put(8, findViewById(R.id.piece8));
+
+    }
+
+
+    public void start() {
+
+        player = true;
+        for(int i = 0; i < this.board.length; i++) {
+            board[i] = -1;
+        }
 
     }
 
