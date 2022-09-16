@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         views.put(7, findViewById(R.id.piece7));
         views.put(8, findViewById(R.id.piece8));
 
+        start();
+
     }
 
     public void start(View v) {
