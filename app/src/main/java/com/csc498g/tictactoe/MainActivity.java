@@ -27,15 +27,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        views.add((ImageView) findViewById(R.id.piece0));
-        views.add((ImageView) findViewById(R.id.piece1));
-        views.add((ImageView) findViewById(R.id.piece2));
-        views.add((ImageView) findViewById(R.id.piece3));
-        views.add((ImageView) findViewById(R.id.piece4));
-        views.add((ImageView) findViewById(R.id.piece5));
-        views.add((ImageView) findViewById(R.id.piece6));
-        views.add((ImageView) findViewById(R.id.piece7));
-        views.add((ImageView) findViewById(R.id.piece8));
+        views.add(findViewById(R.id.piece0));
+        views.add(findViewById(R.id.piece1));
+        views.add(findViewById(R.id.piece2));
+        views.add(findViewById(R.id.piece3));
+        views.add(findViewById(R.id.piece4));
+        views.add(findViewById(R.id.piece5));
+        views.add(findViewById(R.id.piece6));
+        views.add(findViewById(R.id.piece7));
+        views.add(findViewById(R.id.piece8));
 
         start();
 
