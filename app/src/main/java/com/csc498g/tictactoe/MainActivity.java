@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         for(int i = 0; i < this.board.length; i++) {
             board[i] = -1;
         }
+        views.values().forEach(t -> t.setImageResource(0));
 
     }
 
