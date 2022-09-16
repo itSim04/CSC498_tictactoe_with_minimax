@@ -38,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void start(View v) {
+
+        start();
+
+    }
+
     public void ai(View v) {
 
         ai = !((Switch)v).isChecked();
