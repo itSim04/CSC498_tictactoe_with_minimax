@@ -3,8 +3,11 @@ package com.csc498g.tictactoe;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +33,36 @@ public class MainActivity extends AppCompatActivity {
         views.put(6, findViewById(R.id.piece6));
         views.put(7, findViewById(R.id.piece7));
         views.put(8, findViewById(R.id.piece8));
+
+    }
+
+    public void tick(View v) {
+
+
+        ImageView spot = (ImageView) v;
+        int position = Integer.parseInt(spot.getTag().toString());
+
+        if(board[position] == -1 && algorithm.isWin() == -1) {
+
+            board[position] = player ? 0 : 1;
+            animateEntrance(spot);
+            player = !player;
+
+            if(ai) {
+                int move = algorithm.findBestMove();
+                board[move] = player ? 0 : 1;
+                animateEntrance(views.get(move));
+                player = !player;
+            }
+
+
+        }
+
+        if(algorithm.isWin() != -1) {
+            Toast.makeText(getApplicationContext(), "Player " + (algorithm.isWin() + 1) + " wins", Toast.LENGTH_LONG).show();
+        } else if(!Arrays.stream(board).anyMatch(t -> t == -1)) {
+            Toast.makeText(getApplicationContext(), "Tie", Toast.LENGTH_LONG).show();
+        }
 
     }
 
