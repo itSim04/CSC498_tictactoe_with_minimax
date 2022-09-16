@@ -1,16 +1,15 @@
 package com.csc498g.tictactoe;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
             if(algorithm.isWin() != -1) {
                 Toast.makeText(getApplicationContext(), "Player " + (algorithm.isWin() + 1) + " wins", Toast.LENGTH_LONG).show();
-            } else if(!Arrays.stream(board).anyMatch(t -> t == -1)) {
+            } else if(Arrays.stream(board).noneMatch(t -> t == -1)) {
                 Toast.makeText(getApplicationContext(), "Tie", Toast.LENGTH_LONG).show();
             }
 
