@@ -60,9 +60,12 @@ public class MainActivity extends AppCompatActivity {
         views.values().forEach(t -> t.setImageResource(0));
 
         if(ai) {
-            int move = algorithm.findBestMove();
+
+            Random rd = new Random();
+            int move = rd.nextInt(9);
             board[move] = player ? 0 : 1;
             animateEntrance(views.get(move));
+
             player = !player;
         }
 
