@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             if(algorithm.isWin() != -1) {
 
                 Toast.makeText(getApplicationContext(), "Player " + (algorithm.isWin() + 1) + " wins", Toast.LENGTH_LONG).show();
-                EditText scoreLabel = (algorithm.isWin() == 0 ? findViewById(R.id.playerOneScore) : findViewById(R.id.playerTwoScore));
+                TextView scoreLabel = (algorithm.isWin() == 0 ? findViewById(R.id.playerOneScore) : findViewById(R.id.playerTwoScore));
                 int score = Integer.parseInt(scoreLabel.getText().toString());
                 scoreLabel.setText(++score + "");
 
