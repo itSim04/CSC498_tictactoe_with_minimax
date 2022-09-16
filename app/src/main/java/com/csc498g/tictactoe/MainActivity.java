@@ -59,6 +59,13 @@ public class MainActivity extends AppCompatActivity {
         }
         views.values().forEach(t -> t.setImageResource(0));
 
+        if(ai) {
+            int move = algorithm.findBestMove();
+            board[move] = player ? 0 : 1;
+            animateEntrance(views.get(move));
+            player = !player;
+        }
+
     }
 
     public void tick(View v) {
