@@ -157,4 +157,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
+    <TextView
+        android:id="@+id/playerOneScoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/playerOneScore"
+        android:text="Player 1:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/playerTwoScoreLabel"
+        app:layout_constraintEnd_toStartOf="@+id/playerOneScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/playerOneScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/playerTwoScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playerOneScoreLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerTwoScoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/playerTwoScore"
+        android:text="Player 2:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/boardLayout"
+        app:layout_constraintEnd_toStartOf="@+id/playerTwoScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerOneScoreLabel" />
+
+    <EditText
+        android:id="@+id/playerTwoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/boardLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playerTwoScoreLabel"
+        app:layout_constraintTop_toBottomOf="@+id/playerOneScore" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

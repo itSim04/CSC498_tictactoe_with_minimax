@@ -2,6 +2,7 @@ package com.csc498g.tictactoe;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -93,9 +94,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if(algorithm.isWin() != -1) {
+
                 Toast.makeText(getApplicationContext(), "Player " + (algorithm.isWin() + 1) + " wins", Toast.LENGTH_LONG).show();
+                EditText scoreLabel = (algorithm.isWin() == 0 ? findViewById(R.id.playerOneScore) : findViewById(R.id.playerTwoScore));
+                scoreLabel.setText(Integer.parseInt(scoreLabel.getText().toString()) + 1);
+
             } else if(Arrays.stream(board).noneMatch(t -> t == -1)) {
+
                 Toast.makeText(getApplicationContext(), "Tie", Toast.LENGTH_LONG).show();
+
             }
 
         }
