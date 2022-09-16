@@ -34,7 +34,8 @@
             android:tag="0"
             app:layout_column="0"
             app:layout_row="0"
-            />
+
+            tools:ignore= "SpeakableTextPresentCheck,ContentDescription"  />
 
         <ImageView
             android:id="@+id/piece1"
@@ -45,7 +46,7 @@
             android:tag="1"
             app:layout_column="1"
             app:layout_row="0"
-            />
+           tools:ignore= "SpeakableTextPresentCheck,ContentDescription"  />
 
         <ImageView
             android:id="@+id/piece2"
@@ -56,7 +57,7 @@
             android:tag="2"
             app:layout_column="2"
             app:layout_row="0"
-            />
+            tools:ignore= "SpeakableTextPresentCheck,ContentDescription"  />
 
         <ImageView
             android:id="@+id/piece3"
@@ -67,7 +68,7 @@
             android:tag="3"
             app:layout_column="0"
             app:layout_row="1"
-            />
+           tools:ignore= "SpeakableTextPresentCheck,ContentDescription"  />
 
         <ImageView
             android:id="@+id/piece4"
@@ -78,7 +79,7 @@
             android:tag="4"
             app:layout_column="1"
             app:layout_row="1"
-            />
+           tools:ignore= "SpeakableTextPresentCheck,ContentDescription"  />
 
         <ImageView
             android:id="@+id/piece5"
@@ -89,7 +90,7 @@
             android:tag="5"
             app:layout_column="2"
             app:layout_row="1"
-            />
+           tools:ignore= "SpeakableTextPresentCheck,ContentDescription"  />
 
         <ImageView
             android:id="@+id/piece6"
@@ -100,7 +101,7 @@
             android:tag="6"
             app:layout_column="0"
             app:layout_row="2"
-            />
+           tools:ignore= "SpeakableTextPresentCheck,ContentDescription"  />
 
         <ImageView
             android:id="@+id/piece7"
@@ -111,7 +112,7 @@
             android:tag="7"
             app:layout_column="1"
             app:layout_row="2"
-            />
+            tools:ignore="SpeakableTextPresentCheck,ContentDescription" />
 
         <ImageView
             android:id="@+id/piece8"
@@ -122,7 +123,7 @@
             android:tag="8"
             app:layout_column="2"
             app:layout_row="2"
-            />
+           tools:ignore= "SpeakableTextPresentCheck,ContentDescription"  />
 
 
 
@@ -147,6 +148,7 @@
         android:id="@+id/aiSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:onClick="ai"
         android:text="2 Players"
         android:textSize="24sp"
