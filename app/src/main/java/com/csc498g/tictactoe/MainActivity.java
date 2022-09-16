@@ -97,7 +97,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "Player " + (algorithm.isWin() + 1) + " wins", Toast.LENGTH_LONG).show();
                 EditText scoreLabel = (algorithm.isWin() == 0 ? findViewById(R.id.playerOneScore) : findViewById(R.id.playerTwoScore));
-                scoreLabel.setText(Integer.parseInt(scoreLabel.getText().toString()) + 1);
+                int score = Integer.parseInt(scoreLabel.getText().toString());
+                scoreLabel.setText(++score + "");
 
             } else if(Arrays.stream(board).noneMatch(t -> t == -1)) {
 

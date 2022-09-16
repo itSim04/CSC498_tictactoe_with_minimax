@@ -169,16 +169,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/playerOneScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="99dp"
+        android:layout_height="31dp"
         android:width="100dp"
-        android:editable="false"
+        android:height="10dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="none"
         android:minHeight="48dp"
         android:text="0"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/playerTwoScore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/playerOneScoreLabel"
@@ -196,16 +197,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerOneScoreLabel" />
 
-    <EditText
+    <TextView
         android:id="@+id/playerTwoScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="31dp"
         android:width="100dp"
-        android:editable="false"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="none"
         android:minHeight="48dp"
         android:text="0"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/boardLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/playerTwoScoreLabel"
